@@ -2128,6 +2128,7 @@ public class Matrix3d implements java.io.Serializable, Cloneable {
 	double s1,s2,s3,s4;
 	double cl1,cl2,cl3;
 
+	double[] save = { m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8] };
 
 	for(i=0; i<9; i++)
 	    rot[i] = m[i];
@@ -2376,7 +2377,7 @@ public class Matrix3d implements java.io.Serializable, Cloneable {
 	  System.out.println("t2="+t2[6]+" "+t2[7]+" "+t2[8]);
 	  */
 
-	svdReorder( m, t1, t2, scales, outRot, outScale);
+	svdReorder( save, t1, t2, scales, outRot, outScale);
 
     }
 
